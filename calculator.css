@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#2c5e50,#34495e);
+}
+#calci{
+    background:#1e272e;
+    padding:20px;
+    border-radius: 15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+    width:320px;
+}
+#display{
+    background:#2f3640;
+    color:white;
+    padding:15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+}
+#preview{
+    font-size: 16px;
+    opacity:0.7;
+    min-height: 20px;
+}
+#expression{
+    font-size: 28px;
+    font-weight: bold;
+    min-height: 40px;
+}
+#buttons{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+}
+#buttons button{
+    padding:20px;
+    font-size:18px;
+    border:none;
+    border-radius: 10px;
+    background: #3b3b98;
+    color:white;
+    cursor: pointer;
+    transition:all 0.2s ease;
+}
+#buttons button:hover{
+    background: #575fcf;
+}
+button[data-action="clear"] {
+  background: #e74c3c;
+}
+
+button[data-action="clear"]:hover {
+  background: #c0392b;
+}
+
+button[data-action="backspace"] {
+  background: #f39c12;
+}
+
+button[data-action="backspace"]:hover {
+  background: #d35400;
+}
+
+button[data-action="equals"] {
+  background: #27ae60;
+  grid-column: span 1;
+}
+
+button[data-action="equals"]:hover {
+  background: #1e8449;
+}
